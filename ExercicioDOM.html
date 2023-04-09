@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+ <meta charset="UTF-8"> <!-- Seleciona a cadeia de 
+caracteres para o padrão de acentução que usamos no português 
+-->
+ <link rel="stylesheet" type="text/css"
+href="styles.css" /> <!-- Faz o link para o caminho do arquivo css-->
+ <title>Manipulando o Estilo do Site pela DOM</title>
+<!-- Nome da abinha do navegador -->
+ </head>
+<body>
+ <div id="manipula">
+ <p>Com base nos argumentos apresentados na aula, 
+é possivel entender que
+ uma coisa é uma coisa e outra coisa é outra 
+coisa, admito que não concordo nem discordo,
+ muito pelo contrário.</p>
+ <p class="paragrafo">É factivel que a Terra é um 
+dos planetas mais conhecidos
+ do mundo, mesmo sabendo que a vida é uma sucessão 
+de sucessivos que sucedem sucessivamente sem cessar. 
+ Agora, mais do que nunca, é a hora, afinal, o 
+importante é o que importa, pois onde quer que você esteja,
+ você sempre estará lá.</p>
+ </div>
+<br>
+<hr>
+ <h2 class="chamada">Altere o texto acima clicando nos 
+botões</h2>
+ <div id="botoes">
+<!-- Atualizar  -->
+ <input type="button" value="Atualizar" onclick="window.location.reload()
+ "/>
+ <!-- Tamanho Fonte -->
+ <input type="button" value="Tamanho Fonte" onclick="mudatamanhofonte()"/>
+ <!-- Cor da Fonte -->
+ <input type="button" value="Cor da Fonte" onclick="cordafonte()"/>
+ <!-- Cor da DIV-->
+ <input type="button" value="Cor da DIV" onclick="cordadiv()"/>
+ <!-- Italico -->
+ <input type="button" value="Italico" onclick="italico()"/>
+ <!-- Negrito -->
+ <input type="button" value="Negrito" onclick="negrito()"/>
+ <!-- Incluir Border-->
+ <input type="button" value="+ Borda" onclick="borda()"/>
+ <!-- Tirar Border-->
+ <input type="button" value="- Borda" onclick="semborda()"/>
+ <!-- Esconder DIV -->
+ <input type="button" value="Esconde" onclick="escondediv()"/>
+ <!-- Reaparece DIV-->
+ <input type="button" value="Reaparece DIV" onclick="reaparecediv()"/>
+
+ <input type="button" value="Se formar na FAM" ondblclick="imagem()"/>
+ <input type="button" value="Botão 12"/>
+ <input type="button" value="Botão 13"/>
+ <input type="button" value="Botão 14"/>
+ <input type="button" value="Botão 15"/> 
+ <input type="button" value="Botão 16"/>
+ <input type="button" value="Botão 17"/>
+ <input type="button" value="Botão 18"/>
+ 
+</div> 
+ <img id="image" src="xuxa.jpg">
+ <script> //começa a brincadeira com JavaScript
+
+function mudatamanhofonte(){
+    document.getElementById("manipula").style.fontSize = "20pt";
+}
+
+function cordafonte(){
+    document.getElementById("manipula").style.color = "#ffffff"
+}
+
+function cordadiv(){
+    document.getElementById("manipula").style.backgroundColor = "black"
+}
+
+function italico(){
+    document.getElementById("manipula").style.fontStyle = "italic"
+}
+
+function negrito(){
+    document.getElementById("manipula").style.fontWeight = "bold"
+}
+
+function borda(){
+    document.getElementById("manipula").style.border = "8px solid black"
+}
+
+function semborda(){
+    document.getElementById("manipula").style.border = "0px"
+}
+
+function escondediv(){
+    document.getElementById("manipula").style.display = "none"    
+}
+
+function reaparecediv(){
+    document.getElementById("manipula").style.display = "block"    
+}
+
+function imagem(){
+    var img = document.querySelector("#image");
+    img.setAttribute('src','alien.jpg');
+}
+
+ </script> <!-- termina a brincadeira com JavaScript -->
+ </body>
+</html>
